@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="script.js">
+	<title>Survey form by Chynara</title>
+</head>
+<body translate="no">
+	
+	<div class="container">
+		<header class="header">
+			<h1 id="title" class="text-center">
+				"РУССКИЙ СТИЛЬ" - ОПРОСНЫЙ ЛИСТ 
+			</h1>
+			<p id="description" class="text-description">Спасибо, что нашли время помочь нам улучшить наш сервис</p>
+		</header>
+		<form id="survey-form">
+			<div class="form-group">
+				<label id="name-label" for="name">Имя</label>
+				<input type="text" name="name" id="name" class="form-control" placeholder="Введите ваше имя" require>
+			</div>
+			<div class="form-group">
+				<label id="email-label" for="email">Электронная почта</label>
+				<input type="text" name="email" id="email" class="form-control" placeholder="Введите вашу почту" require>
+			</div>
+			
+            <div class="form-group">
+				<label id="number-label" for="number">
+					Возраст 
+					<span class="clue">(необязательно)</span>
+				</label>
+				<input type="number" name="number" id="number" min="10" max="99" class="form-control" placeholder="Возраст"require>
+			</div>
+			<div class="form-group">
+				<p>Какой вариант лучше всего описывает вашу текущую роль?</p>
+				<select id="dropdown" name="role" class="form-control" required="">
+					<option disabled selected value>Выберите текущую роль</option>
+					<option value="student">Студент</option>
+					<option value="job">Рабочий</option>
+					<option value="learner">Безработный</option>
+					<option value="preferNo">Предпочитаю не говорить</option>
+					<option value="other">Другое</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<p>Вы бы порекомендовали "Русский стиль" вашему другу?</p>
+				<label>
+					<input type="radio" name="user-recommend" value="definitely" class="input-radio" checked> Обязательно
+				</label>
+				<label>
+					<input type="radio" name="user-recommend" value="maybe" class="input-radio" checked> Возможно
+				</label>
+				<label>
+					<input type="radio" name="user-recommend" value="not-sure" class="input-radio" checked> Вряд ли
+				</label>
+			</div>
+			<div class="form-group">
+				<p>На какие материалы вы заказываете у нас гравировку?</p>
+				<select id="most-like" name="mostLike" class="form-control" required="">
+					<option value disabled selected value>Выберите материал</option>
+					<option value="metal">Металл</option>
+					<option value="wood">Дерево</option>
+					<option value="plastic">Пластик</option>
+					<option value="leather">Кожа</option>
+					<option value="stone">Камень</option>
+					<option value="glass">Стекло</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<p>
+					
+					Что бы вы хотели улучшить?
+
+				<span class="clue">(проверить все это)</span>
+                </p>
+                <label>
+                	<input type="checkbox" name="prefer" class="input-checkbox" value="quality"> Качество
+                </label>
+                <label>
+                	<input type="checkbox" name="prefer" class="input-checkbox" value="payment"> Способы оплаты
+                </label>
+                <label>
+                	<input type="checkbox" name="prefer" class="input-checkbox" value="time"> Время изготовления
+                </label>
+                <label>
+                	<input type="checkbox" name="prefer" class="input-checkbox" value="service"> Обслуживание персонала
+                </label>
+                <label>
+                	<input type="checkbox" name="prefer" class="input-checkbox" value="delivery"> Доставка                </label>
+			</div>
+			<div class="form-group">
+				<p>
+					Ваши предложения и комментарии?
+				</p>
+				<textarea id="comments" class="input-textarea" name="comment" placeholder="Пишите ваши комментарии здесь..."></textarea>
+			</div>
+			<div class="form-group">
+				<button type="submit" id="submit" class="submit-button">Отправить</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
